@@ -10,7 +10,7 @@ extern "C" void app_main(void) {
 
     while (1) {
         if (i2s_channel_read(rx_handle, buffer, sizeof(buffer), &bytes_read, 1000) == ESP_OK) {
-            printf("Read %d bytes\n", (int)bytes_read);
+            printf("Read %d bytes: %ld %ld %ld ...\n", (int)bytes_read, (long)buffer[0], (long)buffer[1], (long)buffer[2]);
         }
     }
 }
