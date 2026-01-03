@@ -1,3 +1,4 @@
 idf_component_register(SRCS "main.cpp" "audio_driver.cpp"
-                    INCLUDE_DIRS ".")
+                    INCLUDE_DIRS "."
+                    REQUIRES driver esp_lcd ssd1306)
 
