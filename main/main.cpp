@@ -46,8 +46,8 @@ extern "C" void app_main(void) {
     
     esp_lcd_panel_io_handle_t io;
     esp_lcd_panel_io_i2c_config_t io_cfg = {
-        .dev_addr = 0x3C, .scl_speed_hz = 400000,
-        .lcd_cmd_bits = 8, .lcd_param_bits = 8
+        .dev_addr = 0x3C, .lcd_cmd_bits = 8,
+        .lcd_param_bits = 8, .scl_speed_hz = 400000
     };
     ESP_ERROR_CHECK(esp_lcd_new_panel_io_i2c(bus, &io_cfg, &io));
     
